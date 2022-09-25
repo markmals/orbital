@@ -21,9 +21,6 @@ There is nothing new or revolutionary here. It's just me, assembling my favorite
     - [ ] Fork (?) the [Astro LSP](https://github.com/withastro/language-tools) to add support for using `<script>` variables in template expressions (and other features)
     - [ ] VS Code extension
 - [ ] Automatic reactivity by wrapping `let` declarations in `<script>` tags with [`signal()`](https://preactjs.com/guide/v10/signals#signalinitialvalue) initializers
-- [ ] Directives
-    - User-defined directives allow behavior to be applied to an element or component by matching on a specific prop/attribute
-    - Directives are identified by their name (`myDirective`) and can have a value (`myDirective={5}`), an argument (`myDirective:foo`), a modifier (`myDirective.bar`), multiple modifiers (`myDirective.bar.baz`), or any combination thereof (`myDirective:foo.bar.baz={5}`)
 - [ ] Built-in directives
     - [ ] [`class.` directive](https://svelte.dev/docs#template-syntax-element-directives-class-name) to toggle a class on an element (e.g. `<div class.active={isActive}>...</div>`)
     - [ ] [`class:list` directive]() for converting an array of class values into a class string (e.g. `<span class:list={[ 'hello goodbye', { hello: true, world: true }, new Set([ 'hello', 'friend' ]) ]} />`)
@@ -31,4 +28,7 @@ There is nothing new or revolutionary here. It's just me, assembling my favorite
     - [ ] [`--style-props` directive](https://svelte.dev/docs#template-syntax-component-directives---style-props) to pass styles as props to components for the purposes of theming, using CSS custom properties (e.g. `<div --theme-color="rgb(0, 0, 255)">...</div>`)
     - [ ] [`set:html` directive](https://docs.astro.build/en/reference/directives-reference/#sethtml) to set the `dangerouslySetInnerHTML={{ __html }}` prop (e.g. `<h1 set:html={rawHTMLString} />`)
     - [ ] [`is:global` directive](https://docs.astro.build/en/reference/directives-reference/#isglobal) to set style blocks in components as unscoped (e.g. `<style is:global>`)
+- [ ] User-defined directives
+    - Apply behavior to any element or component by matching on a specific prop/attribute
+    - Directives are identified by their name (`myDirective`) and can have a value (`myDirective={5}`), an argument (`myDirective:foo`), a modifier (`myDirective.bar`), multiple modifiers (`myDirective.bar.baz`), or any combination thereof (`myDirective:foo.bar.baz={5}`)
     
