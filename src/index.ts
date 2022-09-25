@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 import { parse } from '@astrojs/compiler';
 import { is, Visitor as AstroVisitor } from '@astrojs/compiler/utils';
 import { Node, ParentNode, TextNode } from '@astrojs/compiler/types';
@@ -175,4 +175,10 @@ let inFile = resolve(__dirname, '../tests/index.js');
 let outFile = resolve(__dirname, '../tests/index.mjs');
 
 writeFileSync(inFile, result);
-ESBuild.buildSync({ entryPoints: [inFile], bundle: true, outfile: outFile });
+let { errors } = ESBuild.buildSync({ entryPoints: [inFile], bundle: true, outfile: outFile });
+unlinkSync(inFile);
+
+if (errors) {
+    console.error(errors);
+    if (existsSync(outFile)) unlinkSync(outFile);
+}

@@ -1,13 +1,13 @@
 {
-    "name": "astro-preact",
+    "name": "orbital",
     "version": "0.1.0",
-    "description": "",
+    "description": "A work-in-progress Astro → Preact compiler",
     "main": "index.mjs",
     "type": "module",
     "scripts": {
         "compile": "esbuild src/index.ts --outdir=./dist --out-extension:.js=.mjs && node --experimental-import-meta-resolve dist/index.mjs"
     },
-    "author": "",
+    "author": "Mark Malstrom <mark@malstrom.me>",
     "license": "ISC",
     "resolutions": {
         "react": "npm:@preact/compat",
