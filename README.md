@@ -22,7 +22,7 @@ A WIP compiler to create [Preact](https://preactjs.com/) components as [Single F
 - [ ] Directives
     - User-defined directives allow behavior to be applied to an element or component by matching on a specific prop/attribute
     - Directives are identified by their name (`myDirective`) and can have a value (`myDirective={5}`), an argument (`myDirective:foo`), a modifier (`myDirective.bar`), multiple modifiers (`myDirective.bar.baz`), or any combination thereof (`myDirective:foo.bar.baz={5}`)
-- Built-in directives
+- [ ] Built-in directives
     - [ ] [`class.` directive](https://svelte.dev/docs#template-syntax-element-directives-class-name) to toggle a class on an element (e.g. `<div class.active={isActive}>...</div>`)
     - [ ] [`class:list` directive]() for converting an array of class values into a class string (e.g. `<span class:list={[ 'hello goodbye', { hello: true, world: true }, new Set([ 'hello', 'friend' ]) ]} />`)
     - [ ] [`style.` directive](https://svelte.dev/docs#template-syntax-element-directives-style-property) to set multiple styles on an element (e.g. `<div style.color={myColor}>...</div>`)
